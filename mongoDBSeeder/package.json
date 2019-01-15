@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "jestTest": "jest --detectOpenHandles",
+    "test": "mocha",
+    "generate": "node --max-old-space-size=8192 dataGenerator/dataGenerator.js",
+    "seed": "node --max-old-space-size=8192 dataPopulator/dataPopulator.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,9 @@
     "mongoose": "^5.4.3"
   },
   "devDependencies": {
-    "fs": "0.0.1-security"
+    "chai": "^4.2.0",
+    "fs": "0.0.1-security",
+    "jest": "^23.6.0",
+    "mocha": "^5.2.0"
   }
 }
